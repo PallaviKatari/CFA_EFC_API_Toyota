@@ -1,6 +1,6 @@
 ﻿   1. Add the Packages
    - Install the necessary NuGet packages for Entity Framework Core and your database provider (e.g., Microsoft.EntityFrameworkCore.SqlServer).
-   - Microsoft.EntityFrameworkCore,Microsoft.EntityFrameworkCore.SqlServer,Microsoft.EntityFrameworkCore.Tools,,MIcrosoft.EntityFrameworkCore.Design
+   - Microsoft.EntityFrameworkCore,Microsoft.EntityFrameworkCore.SqlServer,Microsoft.EntityFrameworkCore.Tools,MIcrosoft.EntityFrameworkCore.Design
    2. Create the DbContext
    - Create a class that inherits from DbContext and define DbSet properties for your entities.
    3. Configure the Connection String in appsettings.json
@@ -21,6 +21,8 @@
    - If you're using Swagger for API documentation, ensure it's set up to document your endpoints that interact with the database.
    - Install -Package Swashbuckle.AspNetCore
    - Configure Swagger in Program.cs
+   - builder.Services.AddEndpointsApiExplorer();
+   - builder.Services.AddSwaggerGen();
    - app.UseSwagger();
    - app.UseSwaggerUI();
    10. Run the Application - https://localhost:7197/swagger/index.html
